@@ -58,7 +58,6 @@ FocusScope {
 
         Keys.onPressed: {
             if (event.key == Qt.Key_F) {
-                resetCameraCenter();
                 resetCameraPosition();
             }
             else if(Qt.Key_1 <= event.key && event.key <= Qt.Key_3)
