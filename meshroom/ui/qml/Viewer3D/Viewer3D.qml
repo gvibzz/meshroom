@@ -229,6 +229,26 @@ FocusScope {
         }
     }
 
+    // Rendering modes
+    FloatingPane {
+        anchors.bottom: parent.bottom
+        padding: 4
+        Row {
+            Repeater {
+                model: Viewer3DSettings.renderModes
+
+                delegate: MaterialToolButton {
+                    text: modelData["icon"]
+                    ToolTip.text: modelData["name"] + " (" + (index+1) + ")"
+                    font.pointSize: 11
+                    onClicked: Viewer3DSettings.renderMode = index
+                    checked: Viewer3DSettings.renderMode === index
+                    checkable: !checked // hack to disabled check on toggle
+                }
+            }
+        }
+    }
+
     // Menu
     Menu {
         id: contextMenu
