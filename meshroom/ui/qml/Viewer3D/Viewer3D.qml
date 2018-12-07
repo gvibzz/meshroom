@@ -223,7 +223,7 @@ FocusScope {
 
         Inspector3D {
             id: inspector3d
-            width: 220
+            width: 200
             Layout.minimumWidth: 5
 
             camera: mainCamera
